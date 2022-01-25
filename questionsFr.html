@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="assests/css/fr/questionsFr.css" rel="stylesheet" type="text/css">
+<title>COVID-19 Screening Tool</title>
+
+<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+
+
+</head>
+<body>
+<div class="header">
+    <center>
+        <div class="logo">COVID-19 Outil De Dépistage</a></div>
+    </center>
+
+
+</div>
+
+
+<div class="questions">
+    <center>
+        <h1 id='msg' class='msg'></h1>
+        <div class = "slide active" >
+            <h1>Etiez-vous à l’étranger pendant les dernières 4 semaines</h1></br>
+        <label class="radio">
+            <input type="radio" name ="traveling"  value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="traveling" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Etiez-vous en contact avec une personne ayant la maladie</h1></br>
+        <label class="radio">
+            <input type="radio" id ="contactConfrimed" name ="contactConfrimed"  value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" id ="contactConfrimed" name ="contactConfrimed"  value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Etiez-vous en contact avec une personne soupçonnée d’avoir la maladie</h1></br>
+        <label class="radio">
+            <input type="radio" id ="contactSuspected" name ="contactSuspected"  value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" id ="contactSuspected" name ="contactSuspected" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class = "slide">
+            <h1>Pensez-vous avoir ou avoir eu de la fièvre (plus que 37.8) pendant les dernières 48 heures</h1></br>
+        <label class="radio">
+            <input type="radio" name ="fever" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="fever" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous une toux ou une augmentation de votre toux habituelle ces derniers jours</h1>
+        <label class="radio">
+            <input type="radio" name ="cough" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="cough" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous vu apparaître une gêne respiratoire ou une augmentation de votre gêne respiratoire habituelle</h1>
+        <label class="radio">
+            <input type="radio" name ="breath" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="breath" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class="slide">
+            <h1>Avez-vous un mal de gorge apparu ces derniers jours</h1>
+        <label class="radio">
+            <input type="radio" name ="throat" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="throat" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous des douleurs musculaires</h1>
+        <label class="radio">
+            <input type="radio" name ="muscle" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="muscle" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous la diarrhée</h1>
+        <label class="radio">
+            <input type="radio" name ="diarrhea" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="diarrhea" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class="slide">
+            <h1>Avez-vous eu des maux de tête</h1>
+            <label class="radio">
+                <input type="radio" name ="headache" value="Yes">
+                Oui
+                <span></span>
+            </label>
+            <label class="radio">
+                <input type="radio" name ="headache" value="No">
+                Non
+                <span></span>
+            </label></br>
+            <h1>Avez-vous une fatigue inhabituelle ces derniers jours</h1>
+            <label class="radio">
+                <input type="radio" name ="tiered" value="Yes">
+                Oui
+                <span></span>
+            </label>
+            <label class="radio">
+                <input type="radio" name ="tiered" value="No">
+                Non
+                <span></span>
+            </label></br>
+            <h1>Avez-vous ces symptômes depuis moins de 2 semaines</h1>
+            <label class="radio">
+                <input type="radio" name ="symptomsSuffering" value="Yes">
+                Oui
+                <span></span>
+            </label>
+            <label class="radio">
+                <input type="radio" name ="symptomsSuffering" value="No">
+                Non
+                <span></span>
+            </label></br>
+        </div>
+        <div class="slide">
+            <h1>Avez-vous plus que 50 ans</h1></br>
+        <label class="radio">
+            <input type="radio" name ="age" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="age" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous de l’hypertension artérielle</h1>
+        <label class="radio">
+            <input type="radio" name ="hypertension" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="hypertension" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Êtes-vous diabétique</h1>
+        <label class="radio">
+            <input type="radio" name ="diabetes" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="diabetes" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class="slide">
+            <h1>Avez-vous des maladies du cœur</h1>
+        <label class="radio">
+            <input type="radio" name ="heartDisease" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="heartDisease" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous une insuffisance rénale chronique dialysée</h1>
+        <label class="radio">
+            <input type="radio" name ="kidneyDisease" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="kidneyDisease" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous ou avez-vous eu un cancer</h1>
+        <label class="radio">
+            <input type="radio" name ="cancer" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="cancer" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class="slide">
+            <h1>Avez-vous une maladie respiratoire</h1>
+        <label class="radio">
+            <input type="radio" name ="chronicLung" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="chronicLung" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Avez-vous une maladie entrainant une immunodéficience (Polyarthrite Rhumatoïde, Lupus Érythémateux Disséminé, Psoriasis, sclérose en plaque, sarcoïdose…)</h1>
+        <label class="radio">
+            <input type="radio" name ="immunosuppression" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="immunosuppression" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Prenez-vous des corticostéroïdes</h1>
+        <label class="radio">
+            <input type="radio" name ="steroids" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="steroids" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class="slide">
+            <h1>Prenez-vous un traitement immunosuppresseur</h1>
+        <label class="radio">
+            <input type="radio" name ="immunosuppressants" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="immunosuppressants" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Êtes-vous obèse</h1>
+        <label class="radio">
+            <input type="radio" name ="obesity" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="obesity" value="No">
+            Non
+            <span></span>
+        </label></br>
+        <h1>Êtes-vous enceinte</h1>
+        <label class="radio">
+            <input type="radio" name ="pregnant" value="Yes">
+            Oui
+            <span></span>
+        </label>
+        <label class="radio">
+            <input type="radio" name ="pregnant" value="No">
+            Non
+            <span></span>
+        </label></br>
+        </div>
+        <div class="slide">
+            <h1>Est-ce-que vous fumez</h1>
+            <label class="radio">
+                <input type="radio" name ="smoke" value="Yes">
+                Oui
+                <span></span>
+            </label>
+            <label class="radio">
+                <input type="radio" name ="smoke" value="No">
+                Non
+                <span></span>
+            </label></br>
+            <h1>Faites-vous partie du personnel de santé</h1>
+            <label class="radio">
+                <input type="radio" name ="medicalField" value="Yes" onclick="onMedicalField()">
+                Oui
+                <span></span>
+            </label>
+            <label class="radio">
+                <input type="radio" name ="medicalField" value="No" onclick="onNotMedicalField()">
+                Non
+                <span></span>
+            </label></br>
+            <h1 class = "zz" id="zz">En tant que personnel de santé, respectez-vous les précautions de protection lorsque vous êtes en contact avec des patients</h1>
+            <label class="radiozz">
+                <input type="radio" name ="precautions" value="Yes">
+                Oui
+                <span class="spanzz"></span>
+            </label>
+            <label class="radiozz">
+                <input type="radio" name ="precautions" value="No">
+                Non
+                <span class="spanzz"></span>
+            </label></br>
+            
+        </div>
+        <input type="submit" id="back" value="Retour" class="back">
+        <input type="submit" id="continue" value="Continuer" class="continue">
+    </center>
+</div>   
+<footer class="footer">
+    <img class="lsccmed" src = "assests/img/lsccmed.png">
+    <img class="lsa" src = "assests/img/lsa.png">
+    <img class="lps" src = "assests/img/lps.png"><br>
+    &copy; Copyright 2020
+</footer>
+    <script src ="questionsFr.js"></script>  
+</body>
+</html>
